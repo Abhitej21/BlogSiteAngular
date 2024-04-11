@@ -1,0 +1,21 @@
+<div style="display: flex;">
+    <app-sidebar></app-sidebar>
+<div>
+    <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+    <div id="display-blogs">
+        <ng-container *ngFor="let blog of blogs">
+            <div *ngIf="searchText==='' || blog.title.toLowerCase().includes(searchText.toLowerCase()) || 
+            blog.content.toLowerCase().includes(searchText.toLowerCase())">
+                <div class="each-blog">
+                    <div style="display: flex;justify-content: space-between;">
+                        <h4>{{blog.title}}</h4>
+                        <p style="font-weight: bold;font-size: 16px;">Author:&nbsp;&nbsp; {{blog.username}}</p>
+                    </div>
+                    <p>{{blog.content}}</p>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,27 @@
+<div id="sidebar">
+    <div>
+        <h5 style="color: white;font-weight: bold;margin-bottom: 30px;">Hi {{cur_username}} !!</h5>
+    <div class="create-blog">
+        <a routerLink="../create-blog">CREATE BLOG</a>
+    </div>
+    <div class="pages">
+     <ul style="list-style-type: none;">
+        <li routerLinkActive="activeRoute">
+            <a routerLink="../all-blogs" class="signout">Blogs</a>
+        </li>
+        <li routerLinkActive="activeRoute">
+            <a routerLink="../my-blogs" class="signout">My Blogs</a>
+        </li>
+        <li *ngIf="isAdmin" routerLinkActive="activeRoute">
+            <a routerLink="../manageusers" class="signout">Manage Users</a>
+        </li>
+        <li *ngIf="isAdmin" routerLinkActive="activeRoute">
+            <a routerLink="../admin/admin-special" class="signout">Admin Special</a>
+        </li>
+    </ul>
+    </div>
+</div>
+<div>
+    <button class="signout" (click)="signout()">Sign Out</button>
+</div>
+</div>

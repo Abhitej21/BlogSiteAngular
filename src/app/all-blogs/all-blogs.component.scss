@@ -1,0 +1,21 @@
+#display-blogs{
+    padding: 40px;
+    margin-left: 382px;
+    width: calc(100vw - 400px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.each-blog{
+    padding: 20px;
+    border-radius: 15px;
+    width: calc(100vw - 700px);
+    margin-bottom: 50px;
+    border-radius: 2px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.each-blog:hover{
+    transform: scale(1.1)
+}

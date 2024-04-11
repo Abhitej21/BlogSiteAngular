@@ -1,0 +1,34 @@
+<div style="display: flex;">
+<app-sidebar></app-sidebar>
+<div id="new-blog">
+    <div class="form__group">
+        <label for="title" class="form__label">Blog Title</label>
+        <input type="text" class="form__input" [(ngModel)]="blogTitle" id="title" placeholder="" required="" />
+    </div>
+    <div class="form__group">
+        <label for="description" class="form__label">Blog Description</label>
+        <input type="text" class="form__input" [(ngModel)]="blogDescription"  id="description" placeholder="" required="" />
+    </div>
+    <div class="form__group">
+        <label for="name" class="form__label">Please write your blog here</label>
+        <textarea id="blog-content" [(ngModel)]="blogContent" class="form_input content"></textarea>
+    </div>
+    <div class="toggle">
+        <p>Make it private</p>
+        <label class="switch">
+            <input type="checkbox" #checkBox (change)="toggleOption(checkBox.checked)">
+            <span class="slider round"></span>
+            
+        </label> 
+       
+    </div>
+    <!-- <div class="form__group">
+        
+    </div> -->
+    <div style="text-align:center;margin-top: 20px;">
+        <button *ngIf="isEdited" class="add-blog" (click)="submitEdits()">Submit Edits</button>
+        <button *ngIf="!isEdited" class="add-blog" (click)="submitBlog()">Submit</button>
+    </div>
+</div>
+
+</div>

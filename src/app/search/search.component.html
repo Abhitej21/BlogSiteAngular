@@ -1,0 +1,7 @@
+<div class="search-container">
+    <span>Search:</span>
+    <input type="text" [(ngModel)]="searchedValue" 
+    placeholder="Search for a blog"
+    (input)="onSearchTextChanged()"
+    >
+</div>

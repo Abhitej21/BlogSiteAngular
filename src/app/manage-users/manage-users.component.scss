@@ -1,0 +1,75 @@
+input{
+    padding: 10px;
+    background-color: white;
+    border-radius: 12px;
+    margin: 5px;
+    width: 400px;
+  }
+
+  .message{
+    background-color: #d1ffbd;
+    width: 500px;
+    padding: 12px 0px 12px 20px;
+    color: green;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+  }
+  .message .fadeout{
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+.add-user{
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.options{
+    width: 400px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 12px;
+    margin: 5px 0px 50px 8px;
+}
+
+.manage-users{
+    padding: 30px;
+    margin-left: 600px;
+    width: calc(100vw - 620px);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.user-name{
+    width: 600px;
+    height: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+.user-card{
+    margin-top: 10px;
+    width: calc(100vw - 1000px);
+    display: flex;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen{
+
+}
+
+
+// input.ng-invalid.ng-touched{
+//     border: 1px solid red;
+// }

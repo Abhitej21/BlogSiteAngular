@@ -1,0 +1,25 @@
+<div style="display: flex;">
+    <app-sidebar></app-sidebar>
+    <div id="display-blogs">
+        <div style="display: flex;justify-content: center;" *ngIf="blogs.length===0">
+            <h1>No Blogs Found</h1>
+        </div>
+        <div *ngFor="let blog of blogs">
+            <div class="each-blog">
+                <div class="top">
+                    <div style="display: flex;align-items: center;">
+                        <h4 style="margin-right: 20px;">{{blog.title}}</h4>
+                        <p class="btn btn-outline-info" *ngIf="blog.isPrivate">Private</p>
+                        <p class="btn btn-outline-success" *ngIf="!blog.isPrivate">Public</p>
+                </div>
+                    <div>
+                        <button class="edit" (click)="editBlog(blog)">Edit</button>
+                        <button class="delete" (click)="deleteBlog(blog)">Delete</button>
+                    </div>
+                </div>
+                <p>{{blog.content}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
